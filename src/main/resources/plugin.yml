@@ -1,0 +1,6 @@
+name: Spark
+main: me.sores.spark.Spark
+version: 1.0 SNAPSHOT
+author: sores
+commands:
+  spark:
