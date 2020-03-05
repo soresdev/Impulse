@@ -43,4 +43,9 @@ public class Command_spark implements ICommand {
     public void sendPermissionMessage(Player player) {
         player.sendMessage(StringUtil.color("&cNo Permission."));
     }
+
+    @Override
+    public boolean hasPermisson(Player player, String perm) {
+        return false;
+    }
 }

@@ -19,4 +19,5 @@ public interface ICommand extends CommandExecutor {
     void execute(CommandSender sender, String... args);
     void register();
     void sendPermissionMessage(Player player);
+    boolean hasPermisson(Player player, String perm);
 }
