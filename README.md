@@ -6,4 +6,4 @@ Most of my plugins will be created using this resource.
 Some of these methods are provided by myself and other's are created by different users.
 
 # Credits:
-Scoreboard - https://github.com/ThatKawaiiSam
+- Scoreboard - https://github.com/ThatKawaiiSam
