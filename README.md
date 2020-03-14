@@ -7,3 +7,4 @@ Some of these methods are provided by myself and other's are created by differen
 
 # Credits:
 - Scoreboard - https://github.com/ThatKawaiiSam
+- InventoryUtil - https://github.com/LavaisWatery
