@@ -23,7 +23,7 @@ public class Command_spark implements ICommand {
         if(sender instanceof Player){
             Player player = (Player) sender;
 
-            if(!player.hasPermission("spark.spark")){
+            if(!hasPermisson(player, "spark.spark")){
                 sendPermissionMessage(player);
                 return;
             }
@@ -46,6 +46,6 @@ public class Command_spark implements ICommand {
 
     @Override
     public boolean hasPermisson(Player player, String perm) {
-        return false;
+        return player.hasPermission(perm);
     }
 }
