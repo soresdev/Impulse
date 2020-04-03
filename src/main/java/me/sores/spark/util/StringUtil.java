@@ -4,6 +4,8 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -37,6 +39,27 @@ public class StringUtil {
      */
     public static boolean isAlphaWithNumber(String str) {
         return str.matches("[a-zA-Z0-9]+");
+    }
+
+    public static String trimList(List<String> list) {
+        if(list.size() == 0) {
+            return "";
+        }
+        StringBuilder sb = new StringBuilder();
+        Iterator i = list.iterator();
+        if(i.hasNext()){
+            sb.append(i.next());
+            while(i.hasNext()){
+                sb.append(',').append(i.next());
+            }
+        }
+        return sb.toString();
+    }
+
+    public static String[] trimList(String[] array, int startFrom) {
+        List<String> trimd = Arrays.asList(array).subList(startFrom, array.length);
+
+        return trimd.toArray(new String[trimd.size()]);
     }
 
 
