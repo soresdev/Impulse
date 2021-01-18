@@ -3,6 +3,7 @@ package me.sores.spark;
 import me.sores.spark.commands.Command_spark;
 import me.sores.spark.listeners.Listener_playerlistener;
 import me.sores.spark.util.StringUtil;
+import me.sores.spark.util.menu.MenuAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -36,6 +37,7 @@ public class Spark extends JavaPlugin {
         PluginManager pluginManager = Bukkit.getPluginManager();
 
         pluginManager.registerEvents(new Listener_playerlistener(), this);
+        pluginManager.registerEvents(new MenuAPI(), this);
     }
 
     public static Spark getInstance() {
