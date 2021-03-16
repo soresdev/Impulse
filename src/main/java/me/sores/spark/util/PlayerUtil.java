@@ -1,13 +1,16 @@
 package me.sores.spark.util;
 
+import me.sores.spark.Spark;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
+import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.UUID;
 
@@ -15,6 +18,38 @@ import java.util.UUID;
  * Created by sores on 3/3/2020.
  */
 public class PlayerUtil {
+
+    /**
+     * Check Players ping
+     *
+     * @param player - Player to check
+     * @return
+     */
+    public static int getPing(Player player) {
+        return ((CraftPlayer) player).getHandle().ping;
+    }
+
+
+    /**
+     * Respawn player using Spigot methods
+     *
+     * @param player - Player you want respawned
+     */
+    public static void respawnPlayer(final Player player) {
+        new BukkitRunnable() {
+            public void run() {
+                player.spigot().respawn();
+            }
+        }.runTaskLater(Spark.getInstance(), 3L);
+    }
+
+    /**
+     * Gets all online players in array
+     * @return
+     */
+    public static Player[] getOnlinePlayers() {
+        return Spark.getInstance().getServer().getOnlinePlayers().toArray(new Player[]{});
+    }
 
     public static boolean doesExist(Player player){
         return Bukkit.getOnlinePlayers().contains(player);

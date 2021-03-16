@@ -8,12 +8,16 @@ import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.Random;
+
 /**
  * Created by sores on 3/3/2020.
  */
 public class Spark extends JavaPlugin {
 
     private static Spark instance;
+
+    public static Random RAND = new Random();
 
     @Override
     public void onEnable() {
