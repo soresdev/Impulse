@@ -1,6 +1,5 @@
 package me.sores.spark.util.moreprojectiles.projectile;
 
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 import me.sores.spark.Spark;
 import me.sores.spark.util.moreprojectiles.TypedRunnable;
 import me.sores.spark.util.moreprojectiles.event.CustomProjectileHitEvent;

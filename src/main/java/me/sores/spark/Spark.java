@@ -3,11 +3,11 @@ package me.sores.spark;
 import me.sores.spark.commands.Command_spark;
 import me.sores.spark.listeners.Listener_playerlistener;
 import me.sores.spark.util.StringUtil;
-import me.sores.spark.util.menu.MenuAPI;
+import me.sores.spark.util.menu.MenuListener;
 import org.bukkit.Bukkit;
-import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -38,10 +38,7 @@ public class Spark extends JavaPlugin {
     }
 
     private void loadListeners(){
-        PluginManager pluginManager = Bukkit.getPluginManager();
-
-        pluginManager.registerEvents(new Listener_playerlistener(), this);
-        pluginManager.registerEvents(new MenuAPI(), this);
+        Arrays.asList(new Listener_playerlistener(), new MenuListener()).forEach(listener -> Bukkit.getPluginManager().registerEvents(listener, this));
     }
 
     public static Spark getInstance() {
