@@ -83,7 +83,7 @@ public abstract class PaginatedMenu extends Menu {
     }
 
     public int getMaxItemsPerPage(Player player) {
-        return 53;
+        return 45;
     }
 
     /**
