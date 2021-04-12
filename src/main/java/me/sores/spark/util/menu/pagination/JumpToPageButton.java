@@ -47,7 +47,6 @@ public class JumpToPageButton extends Button {
     @Override
     public void clicked(Player player, ClickType clickType) {
         this.menu.modPage(player, this.page - this.menu.getPage());
-        Button.playNeutral(player);
     }
 
     public int getPage() {

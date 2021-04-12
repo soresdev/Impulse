@@ -21,12 +21,11 @@ public class BackButton extends Button {
 
     @Override
     public ItemStack getButtonItem(Player player) {
-        return new ItemBuilder(Material.REDSTONE).setName("&cGo Back").build();
+        return new ItemBuilder(Material.INK_SACK).setData((short) 1).setName("&cGo Back").build();
     }
 
     @Override
     public void clicked(Player player, ClickType clickType) {
-        Button.playNeutral(player);
         back.openMenu(player);
     }
 

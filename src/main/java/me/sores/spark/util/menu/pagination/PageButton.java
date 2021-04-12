@@ -42,16 +42,12 @@ public class PageButton extends Button {
         if (this.mod > 0) {
             if (hasNext(player)) {
                 this.menu.modPage(player, this.mod);
-                Button.playNeutral(player);
             } else {
-                Button.playFail(player);
             }
         } else {
             if (hasPrevious(player)) {
                 this.menu.modPage(player, this.mod);
-                Button.playNeutral(player);
             } else {
-                Button.playFail(player);
             }
         }
     }

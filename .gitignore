@@ -1,34 +1,33 @@
+# Eclipse stuff
+.classpath
+.project
+.settings/
 
-.idea/vcs.xml
-.idea/workspace.xml
-target/classes/me/sores/spark/commands/Command_spark.class
-target/classes/me/sores/spark/listeners/Listener_playerlistener.class
-target/classes/me/sores/spark/Spark.class
-target/classes/me/sores/spark/util/command/ICommand.class
-target/classes/me/sores/spark/util/configuration/ConfigFile.class
-target/classes/me/sores/spark/util/ItemBuilder.class
-target/classes/me/sores/spark/util/ItemUtil.class
-target/classes/me/sores/spark/util/menu/BasicMenu.class
-target/classes/me/sores/spark/util/NumberUtil.class
-target/classes/me/sores/spark/util/PlayerUtil.class
-target/classes/me/sores/spark/util/scoreboard/Assemble.class
-target/classes/me/sores/spark/util/scoreboard/AssembleAdapter.class
-target/classes/me/sores/spark/util/scoreboard/AssembleBoard.class
-target/classes/me/sores/spark/util/scoreboard/AssembleBoardEntry.class
-target/classes/me/sores/spark/util/scoreboard/AssembleListener.class
-target/classes/me/sores/spark/util/scoreboard/AssembleStyle.class
-target/classes/me/sores/spark/util/scoreboard/events/AssembleBoardCreateEvent.class
-target/classes/me/sores/spark/util/scoreboard/AssembleThread.class
-target/classes/me/sores/spark/util/scoreboard/events/AssembleBoardDestroyEvent.class
-target/classes/me/sores/spark/util/StringUtil.class
-target/classes/plugin.yml
-target/maven-archiver/pom.properties
-target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
-target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
-target/original-Spark-1.0-SNAPSHOT.jar
-target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
-target/Spark-1.0-SNAPSHOT.jar
-.idea/vcs.xml
-target/classes/me/sores/spark/util/InventoryUtil.class
-*.class
-.idea/uiDesigner.xml
+# netbeans
+nbproject/
+nbactions.xml
+
+# we use maven!
+build.xml
+
+# maven
+target/
+dependency-reduced-pom.xml
+
+# vim
+.*.sw[a-p]
+
+# various other potential build files
+build/
+bin/
+dist/
+manifest.mf
+
+# Mac filesystem dust
+.DS_Store/
+
+# intellij
+*.iml
+*.ipr
+*.iws
+.idea/
