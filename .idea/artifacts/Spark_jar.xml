@@ -2,7 +2,7 @@
   <artifact type="jar" name="Spark:jar">
     <output-path>$PROJECT_DIR$/../../../Coding Shit/MCM Plugins</output-path>
     <root id="archive" name="Spark.jar">
-      <element id="module-output" name="Spark" />
+      <element id="module-output" name="Impulse" />
     </root>
   </artifact>
 </component>

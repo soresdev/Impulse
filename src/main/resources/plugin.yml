@@ -1,6 +1,6 @@
-name: Spark
-main: me.sores.spark.Spark
+name: Impulse
+main: me.sores.impulse.Impulse
 version: 1.0 SNAPSHOT
 author: sores
 commands:
-  spark:
+  impulse:
