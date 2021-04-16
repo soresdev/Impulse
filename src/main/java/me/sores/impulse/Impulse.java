@@ -1,13 +1,8 @@
 package me.sores.impulse;
 
-import me.sores.impulse.commands.Command_impulse;
-import me.sores.impulse.listeners.Listener_playerlistener;
 import me.sores.impulse.util.StringUtil;
-import me.sores.impulse.util.menu.MenuListener;
-import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -23,22 +18,15 @@ public class Impulse extends JavaPlugin {
     public void onEnable() {
         instance = this;
 
-        loadListeners();
-        loadCommands();
+        new Init(this);
+
         StringUtil.log("&a[Impulse] Impulse version &f" + instance.getDescription().getVersion() + " &asuccessfully loaded.");
     }
 
     @Override
     public void onDisable() {
+        Init.getInstance().unload();
         instance = null;
-    }
-
-    private void loadCommands(){
-        new Command_impulse(this);
-    }
-
-    private void loadListeners(){
-        Arrays.asList(new Listener_playerlistener(), new MenuListener()).forEach(listener -> Bukkit.getPluginManager().registerEvents(listener, this));
     }
 
     public static Impulse getInstance() {

@@ -62,6 +62,11 @@ public class StringUtil {
         return trimd.toArray(new String[trimd.size()]);
     }
 
+    /**
+     * Default usage string
+     * @return
+     */
+    public static String getDefaultUsage() { return ChatColor.YELLOW + "Usage: "; }
 
     public static void log(String message){
         Bukkit.getConsoleSender().sendMessage(color(message));
