@@ -3,10 +3,7 @@ package me.sores.impulse.util;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by sores on 3/3/2020.
@@ -60,6 +57,57 @@ public class StringUtil {
         List<String> trimd = Arrays.asList(array).subList(startFrom, array.length);
 
         return trimd.toArray(new String[trimd.size()]);
+    }
+
+    public static String joinList(String seperator, Object... list) {
+        StringBuilder buf = new StringBuilder();
+
+        for (Object each : list) {
+            if (buf.length() > 0) {
+                buf.append(seperator);
+            }
+
+            if (each instanceof Collection) {
+                buf.append(joinList(seperator, ((Collection)each).toArray()));
+            }
+            else {
+                try {
+                    buf.append(each.toString());
+                }
+                catch (Exception e) {
+                    buf.append(each.toString());
+                }
+            }
+        }
+        return buf.toString();
+    }
+
+    public static String joinListSkip(String seperator, String skip, Object... list) {
+        StringBuilder buf = new StringBuilder();
+
+        for (Object each : list) {
+            if (each.toString().equalsIgnoreCase(skip)) {
+                continue;
+            }
+
+            if (buf.length() > 0) {
+                buf.append(seperator);
+            }
+
+            if (each instanceof Collection) {
+                buf.append(joinListSkip(seperator, skip, ((Collection)each).toArray()));
+            }
+            else {
+                try {
+                    buf.append(each.toString());
+                }
+                catch (Exception e) {
+                    buf.append(each.toString());
+                }
+            }
+        }
+
+        return buf.toString();
     }
 
     /**

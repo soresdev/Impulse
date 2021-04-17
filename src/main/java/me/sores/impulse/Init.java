@@ -2,6 +2,7 @@ package me.sores.impulse;
 
 import me.sores.impulse.commands.Command_impulse;
 import me.sores.impulse.listeners.Listener_playerlistener;
+import me.sores.impulse.util.ItemDB;
 import me.sores.impulse.util.abstr.AbstractInit;
 import me.sores.impulse.util.menu.MenuListener;
 import org.bukkit.plugin.Plugin;
@@ -12,6 +13,8 @@ import org.bukkit.plugin.Plugin;
 public class Init extends AbstractInit {
 
     private static Init instance;
+
+    private ItemDB itemDatabase;
 
     public Init(Plugin plugin) {
         super(plugin);
@@ -24,7 +27,7 @@ public class Init extends AbstractInit {
 
     @Override
     public void initInstances() {
-
+        itemDatabase = new ItemDB(Impulse.getInstance());
     }
 
     @Override
@@ -40,6 +43,10 @@ public class Init extends AbstractInit {
     @Override
     public void unload() {
 
+    }
+
+    public ItemDB getItemDatabase() {
+        return itemDatabase;
     }
 
     public static Init getInstance() {
