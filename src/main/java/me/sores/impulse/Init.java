@@ -42,7 +42,13 @@ public class Init extends AbstractInit {
 
     @Override
     public void unload() {
-
+        getHandlerList().forEach(handler -> {
+            try{
+                handler.unload();
+            }catch (Exception ex){
+                ex.printStackTrace();
+            }
+        });
     }
 
     public ItemDB getItemDatabase() {
