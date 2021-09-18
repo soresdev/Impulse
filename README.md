@@ -8,3 +8,4 @@ Some of these methods are provided by myself and others are created by different
 # Credits:
 - Scoreboard - https://github.com/ThatKawaiiSam
 - Various Implementations - https://github.com/LavaisWatery
+- Credit to - @ItsFrosted 
